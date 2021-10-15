@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Esther Lin</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(200, 112, 34, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(181, 126, 51, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(252, 237, 231, 1);
+}
+.highlight-yellow_background {
+	background: rgba(245, 241, 229, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 1);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(200, 112, 34, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(181, 126, 51, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(252, 237, 231, 1);
+}
+.block-color-yellow_background {
+	background: rgba(245, 241, 229, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 1);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(244, 231, 202, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c79c4625-7006-4c04-9150-5a9490810220" class="page sans"><header><h1 class="page-title">Esther Lin</h1></header><div class="page-body"><div id="8b161a2c-704d-4380-8b0d-9adaa40bac7a" class="column-list"><div id="f45d268f-ebd9-4f12-81fd-893b16a55633" style="width:29.166666666666664%" class="column"><figure id="bd448e67-2900-40cb-b4d8-6bcf0de3c39b" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/Untitled.png"><img style="width:2346px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/Untitled.png"/></a></figure></div><div id="e1c5c769-e39c-4298-a712-7d25b3336935" style="width:37.500000000000014%" class="column"><h3 id="619fe4e4-46e0-45b9-ae33-dd9a81095509" class="">Hi! I&#x27;m Esther. </h3><p id="9beb3701-1756-44bd-a3ac-2adb4defd1e4" class="">This is my personal portfolio. </p><p id="23a8afbf-0937-4e48-a421-829681054a46" class="">I eat. I sleep. I program. </p></div><div id="64c4d280-9770-404c-b210-a8fe6ba925da" style="width:33.33333333333333%" class="column"><figure class="block-color-purple_background callout" style="white-space:pre-wrap;display:flex" id="68ad34c4-cf54-4ac8-b3c8-b56d9b928b30"><div style="font-size:1.5em"><img class="icon" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/github-brands.svg"/></div><div style="width:100%"><mark class="highlight-purple"><a href="https://github.com/estherlin">github</a></mark></div></figure></div></div><hr id="f68cb6bf-6257-423e-b041-6e5de0d450c6"/><h3 id="770aa6f9-cccf-4f9f-b203-1fc46e5a9ac9" class="">Experience</h3><div id="4cf070fa-88c8-4e4b-ac87-c8a62efefea1" class="column-list"><div id="8a34f1e0-8ee1-4a8a-8ccd-1d31584efeea" style="width:50%" class="column"><figure id="f813f902-54a9-4e2e-bfea-1709e91b9b0a" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/sus_owl.gif"><img style="width:336px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/sus_owl.gif"/></a></figure></div><div id="85203763-ea72-4a83-a563-de11fae67e2e" style="width:50%" class="column"><p id="d40a515a-1156-4966-b864-7e5e55c8c0c5" class=""><strong>Volunteer at...</strong></p><p id="5b692ed4-a3d4-4240-bd8f-a830ef8d2886" class="">Oct 2021 - Present</p><p id="6e33e0f2-9f3e-4b06-a93c-0622240eb243" class="">
+</p></div></div><hr id="57bb5d0a-c5b6-4bda-9947-495913cf63f0"/><h3 id="7b9a8cba-437d-4e19-9632-85323b918931" class="">Projects (presentation 1)</h3><div id="35634c06-97d5-4573-97d2-f6f13d7d523e" class="column-list"><div id="1668346a-94d3-4a38-8319-24ba03f0faf0" style="width:50%" class="column"><figure id="a9790102-07c6-4188-bec3-2b0ab52bdc22" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/earthquake.gif"><img style="width:710px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/earthquake.gif"/></a></figure></div><div id="574ac56e-7970-4eb0-9dd8-718a48f0c3eb" style="width:50%" class="column"><p id="5df7fadb-dcb1-46c9-baef-3c8a6a59433f" class=""><strong>Earthquake visualizer</strong></p><p id="02ed34b9-a037-47f1-b290-50e5d27fd4a2" class="">Describe project with one sentence</p><p id="96594c02-462b-4b2c-8fc9-d0e60153ee37" class="">Link to project github</p><p id="754b9930-7404-4828-9954-693fb64126b2" class="">Link to project webpage</p></div></div><div id="bcc08b0e-bfd7-4f8c-ba0c-bb396626242f" class="column-list"><div id="9c3a1bdd-c6e0-44ce-b9e8-9f767e1d74b0" style="width:50%" class="column"><figure id="876c9f63-6ad6-4410-9a6e-a8f6cc178989" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/kmeans.gif"><img style="width:336px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/kmeans.gif"/></a></figure></div><div id="ad6a4f5c-a422-47c1-8eba-94bc1be231d9" style="width:50%" class="column"><p id="1b21a54f-372f-42f8-8024-668eeb12a2ad" class=""><strong>Colour Segmentation with KMeans Clustering</strong></p><p id="2de42c00-a731-47d7-a897-4aef2ec50101" class="">Describe project with one sentence</p><p id="afbb9824-abe7-4980-8a9e-775ccee249d3" class="">Link to project github</p><p id="42e89f77-7cc2-42d9-88bf-d553feb73b9b" class="">
+</p><p id="539d07ef-3d6e-450f-af4f-9bca85b2de5f" class="">
+</p></div></div><div id="a0a3a774-85ff-4db2-8954-7c3b8c654b80" class="column-list"><div id="f4fd9bb6-2c4a-44ed-b2aa-134e70b22e41" style="width:50%" class="column"><figure id="1f8613b3-bfcb-4732-bf1b-826a1e2cc53c" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/misty.png"><img style="width:336px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/misty.png"/></a></figure></div><div id="77ea48a8-1050-4616-bda7-c750b9efc7fa" style="width:50%" class="column"><p id="20200cae-878b-4f13-9b88-6e09d16f7d85" class=""><strong>Misty water effect</strong></p><p id="2b9ea25b-4e85-4642-bcfa-9c4f371745be" class="">Describe project with 1 sentence</p><p id="0cf9f49d-7939-4ee6-9121-6c683eb34786" class="">Link to project github</p><p id="37170e80-1156-4b4e-b269-1a456839f208" class="">
+</p><p id="990958df-66c1-4477-b745-f816e177b384" class="">
+</p><p id="5250b9fd-6447-400a-8cfb-873fe456f959" class="">
+</p></div></div><hr id="c8c165ca-971c-4548-83b9-f9f6e438cefa"/><h3 id="46570f7d-c516-453f-81b2-6e4e502bb0e8" class="">Projects (Presentation 2)</h3><div id="f4b6e18b-7a3c-4d96-876d-c501688fb491" class="column-list"><div id="4ef57e9b-5e52-43d1-aa15-2865db3b5629" style="width:33.333333333333336%" class="column"><figure id="1ab778c4-c04c-436a-ac40-bcec742b2b4d" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/earthquake%201.gif"><img style="width:710px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/earthquake%201.gif"/></a><figcaption>e<strong>arthquake visualizer</strong>
+
+One sentence description
+<span style="border-bottom:0.05em solid"><mark class="highlight-teal"><a href="https://github.com/estherlin">github</a></mark></span></figcaption></figure><figure id="8de6e9a0-5636-4864-b97e-fd25f40b21d4" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/night_ferry_wave.gif"><img style="width:480px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/night_ferry_wave.gif"/></a><figcaption>Random project.
+
+One sentence description
+github</figcaption></figure></div><div id="fcd64aae-2cf4-44a7-96d1-e59a3cf51782" style="width:33.333333333333336%" class="column"><figure id="362523ae-2463-46b9-84b6-d82749c36fc8" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/misty%201.png"><img style="width:432px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/misty%201.png"/></a><figcaption>m<strong>isty water effect</strong> 
+
+One sentence description
+<a href="https://github.com/estherlin">github</a>. </figcaption></figure><figure id="482eccff-2a21-4d80-925a-ddddda4e96f6" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/night_ferry_wave.gif"><img style="width:480px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/night_ferry_wave.gif"/></a><figcaption>Random project.
+
+One sentence.
+<mark class="highlight-blue_background"><a href="https://github.com/estherlin">github</a></mark></figcaption></figure></div><div id="80436c77-d439-4e03-b5d8-d28087c78040" style="width:33.33333333333333%" class="column"><figure id="c2babe22-d7bb-4a89-b4ae-ce5af7c0887c" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/kmeans%201.gif"><img style="width:384px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/kmeans%201.gif"/></a><figcaption>c<strong>olour segmentation</strong>.
+
+One sentence description
+<span style="border-bottom:0.05em solid"><mark class="highlight-blue">github</mark></span></figcaption></figure><figure id="c2e92580-7ca2-4c1d-961d-3abf156cf61e" class="image"><a href="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/kmeans%201.gif"><img style="width:384px" src="Esther%20Lin%20bd448e67290040cbb4d86bcf0de3c39b/kmeans%201.gif"/></a><figcaption>c<strong>olour segmentation</strong>.
+
+One sentence description
+<a href="https://github.com/estherlin"><mark class="highlight-teal_background">github</mark></a></figcaption></figure><p id="e912df04-e9ba-4d36-a1c3-b7a4cf590315" class="">
+</p></div></div></div></article></body></html>
